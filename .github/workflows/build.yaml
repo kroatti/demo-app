@@ -12,7 +12,7 @@ jobs:
       - name: checkout
         uses: actions/checkout@v4 
         
-      - run: realpath /usr/share/dotnet/dotnet
+      - run: lsof /usr/share/dotnet/dotnet
         
       - name: build        
         run: dotnet build -v diag
