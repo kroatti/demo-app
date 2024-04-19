@@ -1,4 +1,4 @@
-﻿name: .NET build
+﻿name: .NET build github.com
 
 on:
   workflow_dispatch: 
