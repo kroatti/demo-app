@@ -6,11 +6,21 @@ on:
 jobs:
   build:
     runs-on: [self-hosted, Linux]
-    container:
-      image: mcr.microsoft.com/dotnet/sdk:8.0    
+#    container:
+#      image: mcr.microsoft.com/dotnet/sdk:8.0    
     steps:
       - name: checkout
         uses: actions/checkout@v4       
-        
-      - name: build        
-        run: dotnet build
+      - name: display Linux os-release
+        run: cat /etc/os-release || exit 0
+      - name: display Linux lsb-release
+        run: cat /etc/lsb-release || exit 0
+      - name: display Linux issue
+        run: cat /etc/issue || exit 0
+      - name: display OS version
+        run: uname -a || exit 0
+      - name: display Linux version
+        run: cat /proc/version || exit 0
+      - run: ls /etc/*release || exit 0
+#      - name: build        
+#        run: dotnet build
