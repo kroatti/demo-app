@@ -9,7 +9,7 @@ jobs:
     container:
       image: mcr.microsoft.com/dotnet/sdk:6.0
     env:
-      DOTNET_CLI_RUN_MSBUILD_OUTOFPROC: 1
+      DOTNET_CLI_RUN_MSBUILD_OUTOFPROC: false
       DOTNET_HOST_PATH: /usr/share/dotnet/dotnet
     steps:
       - name: checkout
