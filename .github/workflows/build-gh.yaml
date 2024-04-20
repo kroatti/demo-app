@@ -4,7 +4,7 @@ on:
   workflow_dispatch: 
 jobs:
   build:
-    runs-on: [self-hosted, Linux]
+    runs-on: [self-hosted, Linux, f3-3]
     container:
       image: mcr.microsoft.com/dotnet/sdk:6.0    
     steps:
