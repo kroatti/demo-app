@@ -6,4 +6,26 @@
         <ImplicitUsings>enable</ImplicitUsings>
     </PropertyGroup>
 
+    <ItemGroup>
+      <Compile Remove="ConsoleApp\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="ConsoleApp\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Remove="ConsoleApp\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="ConsoleApp\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="ConsoleApp\obj\ConsoleApp.csproj.nuget.dgspec.json" />
+      <_ContentIncludedByDefault Remove="ConsoleApp\obj\project.assets.json" />
+      <_ContentIncludedByDefault Remove="ConsoleApp\obj\project.packagespec.json" />
+    </ItemGroup>
+
 </Project>
