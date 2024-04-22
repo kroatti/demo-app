@@ -5,12 +5,9 @@ on:
   workflow_dispatch: 
 jobs:
   build:
-    runs-on: [self-hosted, Linux, f3-3]
+    runs-on: [self-hosted, Linux]
     container:
       image: mcr.microsoft.com/dotnet/sdk:6.0
-    env:
-      DOTNET_CLI_RUN_MSBUILD_OUTOFPROC: false
-      DOTNET_HOST_PATH: /usr/share/dotnet/dotnet
     steps:
       - name: checkout
         uses: actions/checkout@v4            
